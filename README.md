@@ -1,14 +1,14 @@
-# Introduction
+# :beginner: Introduction
 - This project is the final project for Intro to Embedded Systems as well as Electronics I at Rowan University
 
 
 ## :ledger: Index
 
-- [Introduction](#introduction)
+- [:beginner: Introduction](#beginner-introduction)
   - [:ledger: Index](#ledger-index)
-  - [:beginner: Embedded Systems](#beginner-embedded-systems)
+  - [:computer: Embedded Systems](#computer-embedded-systems)
   - [:zap: Electronics](#zap-electronics)
-    - [:electric\_plug: Installation](#electric_plug-installation)
+  - [:electric\_plug: Installation](#electric_plug-installation)
   - [:wrench: Materials](#wrench-materials)
     - [:notebook: MCUs](#notebook-mcus)
     - [:nut\_and\_bolt: Dependencies](#nut_and_bolt-dependencies)
@@ -17,16 +17,16 @@
   - [:page\_facing\_up: Resources](#page_facing_up-resources)
   - [:camera: Gallery](#camera-gallery)
   - [:star2: Credit/Acknowledgment](#star2-creditacknowledgment)
-  - [Instructors](#instructors)
-  - [Students](#students)
+    - [:mortar_board: Instructors](#instructors)
+    - [:school_satchel: Students](#students)
   - [:lock: License](#lock-license)
 
-##  :beginner: Embedded Systems
+##  :computer: Embedded Systems
 The major requirements for this project require the implementations:
 - **Standalone System**
-  - In Altium Designer, we have redesigned a standalone version of the MSP430FR2355 board to suit the needs of the Chess Board. The MSP430FR2355 standalone board as well as a chess board PCB that contains the LEDs and reed switches. To control the LEDs and switches, 2 16-bit shift registers (1 input and 1 output) were used to control the LEDs and switches rather than using an LED matrix.
+  - In Altium Designer, we have redesigned a standalone version of the MSP430FR2355 board to suit the needs of the chess board. The MSP430FR2355 standalone board as well as a chess board PCB that contains the LEDs and reed switches. To control the LEDs and switches, 2 16-bit shift registers (1 input and 1 output) were used to control the LEDs and switches rather than using an LED matrix.
 - **SENSING**
-  - Reed switches being activated by neodynium magnets
+  - Reed switches activated by neodynium magnets
 - **ACTUATING**
   - LEDs are emitted corresponding to the respective reed switch being activated
 - **COMMUNICATING**
@@ -35,21 +35,22 @@ The major requirements for this project require the implementations:
 ## :zap: Electronics
 [Talk about how this relates to electronics]
 
-###  :electric_plug: Installation
-- Steps on how to install this project, to use it.
-- Be very detailed here, For example, if you have tools which run on different operating systems, write installation steps for all of them.
-
+## :electric\_plug: Installation
 
 ##  :wrench: Materials
 If you want other people to contribute to this project, this is the section, make sure you always add this.
 
-### :notebook: MCUs
+#### :notebook: MCUs
 These are the main MCU pre-requisites for the system
 - MSP430FR2355 Development board
 - ESP8266 ESP01 Wi-Fi Module
 
 ###  :nut_and_bolt: Dependencies
 Here are a list of libraries and packages used for Arduino and CCS development of this project.
+
+
+
+#### Arduino
 - Libraries
   - https://www.arduino.cc/reference/en/libraries/arduino-uno-wifi-dev-ed-library/
 
@@ -90,7 +91,9 @@ Add a file structure here with the basic details about files, below is an exampl
 
 ## :question: FAQ
 Talk about possible questions here
-- What issues occurred?
+- What was the provided budget by the instructors?
+- What were the main issues of the project if any?
+- 
 
 ##  :page_facing_up: Resources
 Add important resources here
@@ -99,16 +102,16 @@ Add important resources here
 Pictures of your project.
 
 ## :star2: Credit/Acknowledgment
-## Instructors
+### Instructors
 - Russell Trafford, M.S. (IES)
 - John Schmalzel, Ph.D. (Electronics)
 - Jannatun Naher, Ph.D. (IES)
 - Jochy Perez (Electronics)
 
-## Students
+### Students
 - Keiane Balicanta
 - Andrew McGlynn
 - David Miller
 
-##  :lock: License
+###  :lock: License
 Add a license here, or a link to it.

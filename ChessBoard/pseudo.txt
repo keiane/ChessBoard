@@ -1,0 +1,77 @@
+/*
+ * LED Chess Board: Keiane Balicanta, Andrew McGlynn, David Miller
+ * Code designed by: Keiane Balicanta
+ */
+#include <msp430.h>
+#include <GPIOINIT.h>
+
+#define CS BIT4 //   P1.4
+#define SHCLK BIT5 //   P1.5
+#define CLR BIT6  //   P1.6
+#define CLK BIT7   //   P1.7
+
+void CLK_Pulse (void);   //To create a clock pulse for Storage Reg
+
+int i;
+int x = 0;
+
+void main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
+    PM5CTL0 &= ~LOCKLPM5;
+    P1DIR |= CS + SHCLK + CLR + CLK;
+    gpioInit();
+    P1OUT = 0x00;
+    while (1){
+        P1OUT &= ~CS;
+        P1OUT |= CS;
+        P1OUT |= SHCLK;
+        P1OUT |= SHCLK;
+        P1DIR ^= CLR;
+
+
+        if(!(P2IN & BIT0)){
+            x = 2;
+            for (i = 0; i < x; i++){
+                P1OUT |= CS;
+                CLK_Pulse();
+                P1OUT ^= CS;
+                P6OUT ^= BIT6;          // Toggle P6.6
+           }
+        }
+        if (!(P2IN & BIT1)){
+            x = 3;
+            for (i = 0; i < x; i++){
+                P1OUT |= CS;
+                CLK_Pulse();
+                P1OUT ^= CS;
+           }
+        }
+
+        if (!(P2IN & BIT2)){
+            x = 4;
+            for (i = 0; i < x; i++){
+                P1OUT |= CS;
+                CLK_Pulse();
+                P1OUT ^= CS;
+           }
+        }
+
+        if (!(P2IN & BIT4)){
+            x = 5;
+            for (i = 0; i < x; i++){
+                P1OUT |= CS;
+                CLK_Pulse();
+                P1OUT ^= CS;
+           }
+        }
+
+    }
+
+}
+
+void CLK_Pulse (void)
+{
+  P1OUT |= CLK;
+  P1OUT ^= CLK;
+}
