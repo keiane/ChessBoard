@@ -27,83 +27,80 @@ void main(void)
     P1DIR |= CS + SHCLK + RW + STRCLR + STRCLK + SERIAL;
 
     gpioInit();
-
     while (1){
         P1OUT &= ~CS;
         P1OUT &= ~RW;
         P1OUT &= ~SHCLK;
         P1OUT &= ~STRCLK;
         P1OUT &= ~SERIAL;
-        P1DIR ^= STRCLR;
-        /*
-        for (i = 0; i < 10; i++){
-            //SHCLK_Pulse();
-            //STRCLK_Pulse();
-            P1OUT ^= SHCLK;
-            P1OUT ^= SERIAL;
-            P1OUT |= STRCLK;
-            __delay_cycles(100000);
-            P1OUT |= STRCLR;
-            P1OUT &= ~STRCLR;
-        }
 
-        */
+
         /*
-        for (i = 0; i < 10; i++){
+        for (i = 0; i < 16; i++){
             SHCLK_Pulse();
             STRCLK_Pulse();
-            P1OUT^= SERIAL;
-            __delay_cycles(100000);
+            P1OUT ^= SERIAL;
+            STRCLK_Pulse();
+            __delay_cycles(200000);
+            P1DIR ^= STRCLR;
         }
         */
-        if(!(P2IN & BIT0)){
-            for (i = 0; i < 10; i++){
+
+
+        if((P2IN & BIT0)){
+            for (i = 0; i < 2; i++){
                 SHCLK_Pulse();
                 STRCLK_Pulse();
-                P1OUT^= SERIAL;
-                __delay_cycles(100000);
+                P1OUT ^= SERIAL;
+                STRCLK_Pulse();
+                __delay_cycles(200000);
+                P1DIR ^= STRCLR;
            }
         }
-        if (!(P2IN & BIT1)){
-            for (i = 0; i < 10; i++){
+        /*
+        if ((P2IN & BIT1)){
+            for (i = 0; i < 16; i++){
                 SHCLK_Pulse();
                 STRCLK_Pulse();
-                P1OUT^= SERIAL;
-                __delay_cycles(100000);
+                P1OUT ^= SERIAL;
+                STRCLK_Pulse();
+                __delay_cycles(200000);
+                P1DIR ^= STRCLR;
            }
         }
 
-        if (!(P2IN & BIT2)){
-            for (i = 0; i < 10; i++){
+        if ((P2IN & BIT2)){
+            for (i = 0; i < 16; i++){
                 SHCLK_Pulse();
                 STRCLK_Pulse();
-                P1OUT^= SERIAL;
-                __delay_cycles(100000);
+                P1OUT ^= SERIAL;
+                STRCLK_Pulse();
+                __delay_cycles(200000);
+                P1DIR ^= STRCLR;
            }
         }
 
-        if (!(P2IN & BIT4)){
-            for (i = 0; i < 10; i++){
+        if ((P2IN & BIT4)){
+            for (i = 0; i < 16; i++){
                 SHCLK_Pulse();
                 STRCLK_Pulse();
-                P1OUT^= SERIAL;
-                __delay_cycles(100000);
+                P1OUT ^= SERIAL;
+                STRCLK_Pulse();
+                __delay_cycles(200000);
+                P1DIR ^= STRCLR;
            }
         }
-        //*/
-
+        */
     }
 
 }
 
 void SHCLK_Pulse (void)
 {
-  //P1OUT |= SHCLK;
   P1OUT ^= SHCLK;
 }
 
 void STRCLK_Pulse (void)
 {
-  P1OUT &= ~STRCLK;
   P1OUT ^= STRCLK;
 }
