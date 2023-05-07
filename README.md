@@ -1,5 +1,5 @@
 # :beginner: Introduction
-- This project is the final project for the two courses, Introduction to Embedded Systems as well as Electronics I at Rowan University.
+- This project is the final project for Intro to Embedded Systems as well as Electronics I at Rowan University
 
 
 ## :ledger: Index
@@ -24,7 +24,7 @@
 ##  :computer: Embedded Systems
 The major requirements for this project require the implementations:
 - **Standalone System**
-  - In Altium Designer, we have redesigned a standalone version of the MSP430FR2355 board to suit the needs of the chess board. The MSP430FR2355 standalone board as well as a chess board PCB that contains the LEDs and reed switches. To control the LEDs and switches, 2 16-bit shift registers (1 input/SIPO and 1 output/PISO) were used to control the LEDs and switches rather than using an LED matrix.
+  - In Altium Designer, we have redesigned a standalone version of the MSP430FR2355 board to suit the needs of the chess board. The MSP430FR2355 standalone board as well as a chess board PCB that contains the LEDs and reed switches. To control the LEDs and switches, 2 16-bit shift registers (1 input and 1 output) were used to control the LEDs and switches rather than using an LED matrix.
 - **SENSING**
   - Reed switches activated by neodynium magnets
 - **ACTUATING**
@@ -38,17 +38,15 @@ The major requirements for this project require the implementations:
 ## :electric\_plug: Installation
 
 ##  :wrench: Materials
-### Here is a list of MCUs:
+If you want other people to contribute to this project, this is the section, make sure you always add this.
+
+#### :notebook: MCUs
+These are the main MCU pre-requisites for the system
 - MSP430FR2355 Development board
 - ESP8266 ESP01 Wi-Fi Module
 
-### Here is a list of components used
-- 
-
 ###  :nut_and_bolt: Dependencies
-- The version of Code Composer Studio used is **Version: 12.2.0.00009**
-- The corresponding MSP430 board is the **MSP430FR2355**
-
+Here are a list of libraries and packages used for Arduino and CCS development of this project.
 
 
 
