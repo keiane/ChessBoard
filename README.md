@@ -98,7 +98,7 @@ In the `Arduino WiFi References` folder is a list of documents that was used to 
 
 ![Shift_Wiring](Images/Shift_Wiring.jpg)
 
-![Chess_PCB_Design](Images/Chess_PCB_Design.JPG)
+![Chess_PCB_Design](Images/Chess_PCB_Design.jpg)
 
 ## :star2: Credit/Acknowledgment
 ### Instructors
