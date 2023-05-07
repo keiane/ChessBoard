@@ -7,7 +7,7 @@
 
 #define CS BIT1 //   P1.1 -> chip-level disables register clock and storage register clock
 #define SHCLK BIT2 //   P1.2 -> shift register clock
-#define RW BIT3 //   P1.3 -> read/write
+#define RW BIT3     //   P1.3 -> read/write
 #define STRCLR BIT4  //   P1.4 -> storage clear
 #define STRCLK BIT5   //   P1.5 -> storage clock
 #define SERIAL BIT6   //   P1.6 -> q15
